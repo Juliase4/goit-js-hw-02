@@ -1,26 +1,26 @@
 'use strict';
 
 function getShippingCost(country) {
-  let price = 0;
+  let price = null;
   let message;
   switch (country) {
-    case `China`:
+    case 'China':
       price = 100;
       break;
-    case `Chile`:
+    case 'Chile':
       price = 250;
       break;
-    case `Australia`:
+    case 'Australia':
       price = 170;
       break;
-    case `Jamaica`:
+    case 'Jamaica':
       price = 120;
       break;
     default:
       message = `Sorry, there is no delivery to your country`;
   }
 
-  if (price > 0) {
+  if (price !== 0) {
     message = `Shipping to ${country} will cost ${price} credits`;
   }
 
